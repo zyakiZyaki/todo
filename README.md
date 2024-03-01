@@ -33,5 +33,5 @@ npm run build
 ```sh
 npm run lint
 ```
-# zyakiZyaki.github.io
-# todoList
+# todo
+# todo
