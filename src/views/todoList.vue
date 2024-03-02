@@ -34,7 +34,7 @@
         </div>
       </fieldset>
     <div
-    v-if="validationForm===false"
+      v-if="validationForm===false"
       class="validation">
     Ошибка валидации</div>
       <div class="wrapperInputs">

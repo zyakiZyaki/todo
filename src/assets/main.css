@@ -6,7 +6,8 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    max-width: 500px;
+    min-width: 300px;
 }
 nav, h1 {
     text-align: center;
@@ -28,7 +29,6 @@ nav, h1 {
     align-items: center;
 }
 .inputText {
-    width:500px;
 }
 .inputDate {
     width:50px;
