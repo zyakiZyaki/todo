@@ -6,7 +6,8 @@
     </nav>
     <router-view></router-view>
     <div class="todoList">
-      <fieldset>
+      <fieldset
+        v-if="todos.length">
         <legend>Мои задачи</legend>
         <div
         class="todos"
