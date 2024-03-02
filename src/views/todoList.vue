@@ -13,50 +13,50 @@
         v-for="todo in todos" :key="todo">
           <div class="leftList">
             <div
-            class="datesDeadline"
-            :class="{ checked: todo.state === true }">
-            {{ todo.deadline }}
+              class="datesDeadline"
+              :class="{ checked: todo.state === true }">
+              {{ todo.deadline }}
             </div>
             <input
-            :checked="todo.state === true"
-            @change="todo.state === true ? todo.state = false : todo.state = true"
-            type="checkbox" value="todo" />
+              :checked="todo.state === true"
+              @change="todo.state === true ? todo.state = false : todo.state = true"
+              type="checkbox" value="todo" />
             <label
-            class="labelTodo"
-            :class="{ checked: todo.state === true }"
-            for="todo">
+              class="labelTodo"
+              :class="{ checked: todo.state === true }"
+              for="todo">
             {{ todo.name }}
             </label>
           </div>
           <img
-          src="../assets/trash.png" height="18px" class="removeTodo"
-          @click="removeTodo(todo)">
+            src="../assets/trash.png" height="18px" class="removeTodo"
+            @click="removeTodo(todo)">
         </div>
       </fieldset>
     <div
     v-if="validationForm===false"
-    class="validation">
+      class="validation">
     Ошибка валидации</div>
       <div class="wrapperInputs">
         <input
-        v-model="inputTodo"
-        @keyup.enter="addTodo"
-        type="text"
-        placeholder="Посадить дерево"
-        class="inputText"/>
+          v-model="inputTodo"
+          @keyup.enter="addTodo"
+          type="text"
+          placeholder="Посадить дерево"
+          class="inputText"/>
         <label for="date">Дедлайн
         </label>
         <input
-        v-model="inputDate"
-        @keyup.enter="addTodo"
-        oninput="validity.valid||(value='')"
-        value="date"
-        type="number"
-        placeholder="3 дня"
-        class="inputDate" />
+          v-model="inputDate"
+          @keyup.enter="addTodo"
+          oninput="validity.valid||(value='')"
+          value="date"
+          type="number"
+          placeholder="3 дня"
+          class="inputDate" />
       </div>
       <button
-      @click="addTodo">
+        @click="addTodo">
       Create todo</button>
     </div>
   </div>
